@@ -480,7 +480,7 @@ def main():
             score_text = score_font.render("Score : %s" % str(score), True, WHITE)
             screen.blit(score_text, (10, 5))
         
-        # 绘制游戏结束画面
+        # 绘制游戏结束画面.
         elif life_num == 0:
             # 背景音乐停止
             pygame.mixer.music.stop()
