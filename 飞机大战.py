@@ -13,7 +13,7 @@ from random import *
 pygame.init()
 pygame.mixer.init()
 
-bg_size = width, height = 480, 700
+bg_size = width, height = 1920, 1080 #480, 700
 screen = pygame.display.set_mode(bg_size)
 pygame.display.set_caption("飞机大战 -- FishC Demo")
 
@@ -472,9 +472,7 @@ def main():
             # 绘制剩余生命数量
             if life_num:
                 for i in range(life_num):
-                    screen.blit(life_image, \
-                                (width - 10 - (i + 1) * life_rect.width, \
-                                 height - 10 - life_rect.height))
+                    screen.blit(life_image, (width - 10 - (i + 1) * life_rect.width, height - 10 - life_rect.height))
             
             # 绘制得分
             score_text = score_font.render("Score : %s" % str(score), True, WHITE)

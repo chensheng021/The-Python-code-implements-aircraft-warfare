@@ -18,9 +18,7 @@ class SmallEnemy(pygame.sprite.Sprite):
         self.width, self.height = bg_size[0], bg_size[1]
         self.speed = 2
         self.active = True
-        self.rect.left, self.rect.top = \
-            randint(0, self.width - self.rect.width), \
-            randint(-5 * self.height, 0)
+        self.rect.left, self.rect.top = randint(0, self.width - self.rect.width), randint(-5 * self.height, 0)
         self.mask = pygame.mask.from_surface(self.image)
     
     def move(self):
@@ -31,9 +29,7 @@ class SmallEnemy(pygame.sprite.Sprite):
     
     def reset(self):
         self.active = True
-        self.rect.left, self.rect.top = \
-            randint(0, self.width - self.rect.width), \
-            randint(-5 * self.height, 0)
+        self.rect.left, self.rect.top = randint(0, self.width - self.rect.width), randint(-5 * self.height, 0)
 
 class MidEnemy(pygame.sprite.Sprite):
     energy = 8
